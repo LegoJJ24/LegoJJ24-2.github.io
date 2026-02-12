@@ -1,0 +1,78 @@
+/* Import Google Font 'Roboto Mono' for a tech/code vibe */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+/* GLOBAL STYLES */
+body {
+    background-color: #1e1e1e; /* Dark mode background */
+    color: #e0e0e0; /* Light gray text */
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* HEADER STYLING */
+header {
+    background-color: #bb86fc; /* Bright accent color */
+    color: #121212;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 5px solid #3700b3;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* MAIN LAYOUT */
+main {
+    max-width: 800px;
+    margin: 40px auto; /* Centers the main content */
+    padding: 0 20px;
+}
+
+/* SECTION STYLING */
+section {
+    background-color: #2d2d2d;
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    border-left: 5px solid #03dac6; /* Teal accent border on left */
+    position: relative; /* Allows for positioning children if needed */
+}
+
+/* Typography Updates */
+h2 {
+    color: #03dac6;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+a {
+    color: #bb86fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* IMAGE STYLING */
+.feature-img {
+    max-width: 100%; /* Ensures image fits in the box */
+    height: auto;
+    border-radius: 4px;
+    margin-top: 15px;
+    border: 2px solid #444;
+}
+
+/* Specific Tweak for the Boring Fact Section */
+#fact-section {
+    border-left-color: #cf6679; /* Changes accent color for this specific section */
+}
