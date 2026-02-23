@@ -1,0 +1,85 @@
+/* TP5/style.css */
+:root {
+    --card-size: 150px;
+    --bg-color: #f0f2f5;
+    --card-hidden: #2c3e50;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 1. The Responsive Grid */
+.game-board {
+    display: grid;
+    gap: 15px;
+    /* 4 columns on desktop */
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 800px;
+    perspective: 1000px; /* Required for 3D depth */
+}
+
+/* 2. The Card Container */
+.card {
+    width: var(--card-size);
+    height: var(--card-size);
+    cursor: pointer;
+}
+
+/* 3. The Flipping Logic */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* This triggers the reveal on hover */
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the side not facing the user */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Default "Hidden" State */
+.card-front {
+    background-color: var(--card-hidden);
+    border: 2px solid white;
+}
+
+/* The Image Side */
+.card-back {
+    background-color: white;
+    transform: rotateY(180deg);
+}
+
+.card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 4. Responsive Adjustments */
+@media (max-width: 600px) {
+    .game-board {
+        /* 2 columns on small screens */
+        grid-template-columns: repeat(2, 1fr);
+    }
+    :root {
+        --card-size: 120px;
+    }
+}
