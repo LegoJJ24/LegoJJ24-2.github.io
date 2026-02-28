@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Layout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" rel="stylesheet">
+    
+    <style>
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1a1a2e; 
+            font-family: 'Nunito', sans-serif;
+            color: #ffffff;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            color: #e94560;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        
+        .board {
+           
+            width: 90vw;
+            max-width: 400px; 
+            aspect-ratio: 1 / 1; 
+            
+            
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 10px; 
+            
+            
+            background-color: #16213e; 
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        
+        .cell {
+            background-color: #0f3460; 
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5rem;
+            cursor: default;
+            transition: background-color 0.2s ease;
+        }
+
+        
+        .cell:hover {
+            background-color: #133f75;
+        }
+
+        
+        .mark-x {
+            color: #e94560; 
+            
+            text-shadow: 0 0 15px rgba(233, 69, 96, 0.4); 
+        }
+
+        
+        .mark-o {
+            color: #00adb5; 
+            text-shadow: 0 0 15px rgba(0, 173, 181, 0.4);
+        }
+
+       
+        @media (max-width: 400px) {
+            .cell {
+                font-size: 4rem; 
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tic Tac Toe</h1>
+
+    <div class="board">
+        <div class="cell mark-x">X</div>   <div class="cell"></div>
+        <div class="cell mark-o">O</div>   <div class="cell"></div>
+        <div class="cell mark-x">X</div>   <div class="cell"></div>
+        
+        <div class="cell"></div>
+        <div class="cell mark-o">O</div>   <div class="cell"></div>
+    </div>
+
+</body>
+</html>
