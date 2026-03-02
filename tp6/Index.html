@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App Layout</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="weather-container">
+    
+    <header class="location-header">
+      <h1 class="city">Seattle, WA</h1>
+      <p class="date">Saturday, Feb 28</p>
+    </header>
+
+    <main class="current-weather">
+      <div class="temp-wrapper">
+        <h2 class="current-temp temp-cool">48°F</h2>
+      </div>
+      
+      <div class="current-condition">
+        <span class="condition-icon">⛅</span>
+        <span class="condition-text">Partly Cloudy</span>
+      </div>
+
+      <div class="current-details">
+        <div class="detail-box">
+          <span class="detail-label">Wind</span>
+          <span class="detail-value">
+            8 mph SSW 
+            <span class="wind-arrow" style="transform: rotate(202deg);">↑</span>
+          </span>
+        </div>
+        <div class="detail-box">
+          <span class="detail-label">Humidity</span>
+          <span class="detail-value">72% <span class="humidity-icon">💧</span></span>
+        </div>
+      </div>
+    </main>
+
+    <section class="forecast">
+      <h3 class="forecast-title">3-Day Forecast</h3>
+      <div class="forecast-grid">
+        
+        <div class="forecast-card">
+          <h4 class="day">Sunday</h4>
+          <div class="forecast-icon">🌧️</div>
+          <p class="forecast-condition">Rain</p>
+          <div class="forecast-stats">
+            <span class="forecast-temp">42° / 52°F</span>
+            <span class="forecast-wind">12 mph S <span class="wind-arrow" style="transform: rotate(180deg);">↑</span></span>
+          </div>
+        </div>
+
+        <div class="forecast-card">
+          <h4 class="day">Monday</h4>
+          <div class="forecast-icon">🌦️</div>
+          <p class="forecast-condition">Showers</p>
+          <div class="forecast-stats">
+            <span class="forecast-temp">40° / 50°F</span>
+            <span class="forecast-wind">10 mph SW <span class="wind-arrow" style="transform: rotate(225deg);">↑</span></span>
+          </div>
+        </div>
+
+        <div class="forecast-card">
+          <h4 class="day">Tuesday</h4>
+          <div class="forecast-icon">☁️</div>
+          <p class="forecast-condition">Mostly Cloudy</p>
+          <div class="forecast-stats">
+            <span class="forecast-temp">38° / 46°F</span>
+            <span class="forecast-wind">5 mph N <span class="wind-arrow" style="transform: rotate(0deg);">↑</span></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
 
