@@ -2,6 +2,20 @@ let rowA = [ "-", "-", "-" ];
 let rowB = [ "-", "-", "-" ];
 let rowC = [ "-", "-", "-" ];
 
+const allCells = document.querySelectorAll("Cell"):
+
+allCells.forEach(Cell => {cell.addEventListener("click", funtion () {
+  if (cell.textContent === "") { 
+    if (turnCounter % 2 === 0) {
+      cell.textContnet = "O";
+      cell.classList.add("mark-o);
+    } else {
+      cell.textContent = "X";
+      cell.classList.add("mark-x);
+    }
+
+    turnCounter++;
+
 function checkGameboard(rowA, rowB, rowC) {
   console.log("Function started: Evaluating board...");
 
