@@ -3,6 +3,7 @@ let rowB = [ "-", "-", "-" ];
 let rowC = [ "-", "-", "-" ];
 
 const allCells = document.querySelectorAll("Cell"):
+let turnCounter = 1;
 
 allCells.forEach(Cell => {cell.addEventListener("click", funtion () {
   if (cell.textContent === "") { 
@@ -16,23 +17,34 @@ allCells.forEach(Cell => {cell.addEventListener("click", funtion () {
 
     turnCounter++;
 
+const row = cell.dataset.row; 
+const index = cell.dataset.index;
+
+if (row === "A") {
+    rowA[index] = cell.textContent.toLowerCase(); 
+} else if (row === "B") {
+    
+} else if (row === "C") {
+    
+}
+
 function checkGameboard(rowA, rowB, rowC) {
   console.log("Function started: Evaluating board...");
 
 if ( 
   // Rows
-  (rowA[0] === 'x' && rowA[1] === 'x' && rowA[2] === 'x') || 
-  (rowB[0] === 'x' && rowB[1] === 'x' && rowB[2] === 'x') || 
-  (rowC[0] === 'x' && rowC[1] === 'x' && rowC[2] === 'x') ||
+  (rowA[0] === 'X' && rowA[1] === 'X' && rowA[2] === 'X') || 
+  (rowB[0] === 'x' && rowB[1] === 'x' && rowB[2] === 'X') || 
+  (rowC[0] === 'X' && rowC[1] === 'X' && rowC[2] === 'X') ||
   
   // Columns
-  (rowA[0] === 'x' && rowB[0] === 'x' && rowC[0] === 'x') || 
-  (rowA[1] === 'x' && rowB[1] === 'x' && rowC[1] === 'x') ||
-  (rowA[2] === 'x' && rowB[2] === 'x' && rowC[2] === 'x') ||
+  (rowA[0] === 'X' && rowB[0] === 'X' && rowC[0] === 'X') || 
+  (rowA[1] === 'X' && rowB[1] === 'X' && rowC[1] === 'X') ||
+  (rowA[2] === 'X' && rowB[2] === 'X' && rowC[2] === 'X') ||
  
   // Diagonals  
-  (rowA[0] === 'x' && rowB[1] === 'x' && rowC[2] === 'x') || 
-  (rowA[2] === 'x' && rowB[1] === 'x' && rowC[0] === 'x')  
+  (rowA[0] === 'X' && rowB[1] === 'X' && rowC[2] === 'X') || 
+  (rowA[2] === 'X' && rowB[1] === 'X' && rowC[0] === 'X')  
     ) {
   console.log("Result: Player X wins!");
     return "x";
@@ -40,18 +52,18 @@ if (
   
   else if (
   // Rows
-  (rowA[0] === 'o' && rowA[1] === 'o' && rowA[2] === 'o') || 
-  (rowB[0] === 'o' && rowB[1] === 'o' && rowB[2] === 'o') || 
-  (rowC[0] === 'o' && rowC[1] === 'o' && rowC[2] === 'o') ||
+  (rowA[0] === 'O' && rowA[1] === 'o' && rowA[2] === 'o') || 
+  (rowB[0] === 'O' && rowB[1] === 'o' && rowB[2] === 'o') || 
+  (rowC[0] === 'O' && rowC[1] === 'o' && rowC[2] === 'o') ||
   
   // Columns
-  (rowA[0] === 'o' && rowB[0] === 'o' && rowC[0] === 'o') || 
-  (rowA[1] === 'o' && rowB[1] === 'o' && rowC[1] === 'o') ||
-  (rowA[2] === 'o' && rowB[2] === 'o' && rowC[2] === 'o') ||
+  (rowA[0] === 'O' && rowB[0] === 'O' && rowC[0] === 'O') || 
+  (rowA[1] === 'O' && rowB[1] === 'O' && rowC[1] === 'O') ||
+  (rowA[2] === 'O' && rowB[2] === 'O' && rowC[2] === 'O') ||
  
   // Diagonals  
-  (rowA[0] === 'o' && rowB[1] === 'o' && rowC[2] === 'o') || 
-  (rowA[2] === 'o' && rowB[1] === 'o' && rowC[0] === 'o')  
+  (rowA[0] === 'O' && rowB[1] === 'O' && rowC[2] === 'O') || 
+  (rowA[2] === 'O' && rowB[1] === 'O' && rowC[0] === 'O')  
     ) {
     console.log("Result: Player O wins!");
     return "o";
