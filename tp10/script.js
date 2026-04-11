@@ -2,10 +2,10 @@ let rowA = [ "-", "-", "-" ];
 let rowB = [ "-", "-", "-" ];
 let rowC = [ "-", "-", "-" ];
 
-const allCells = document.querySelectorAll("Cell"):
+const allCells = document.querySelectorAll(".cell");
 let turnCounter = 1;
 
-allCells.forEach(cell => {cell.addEventListener("click", funtion () {
+allCells.forEach(cell => {cell.addEventListener("click", function () {]);
   if (cell.textContent === "") { 
     if (turnCounter % 2 === 0) {
       cell.textContent = "O";
@@ -34,7 +34,7 @@ function checkGameboard(rowA, rowB, rowC) {
 if ( 
   // Rows
   (rowA[0] === 'X' && rowA[1] === 'X' && rowA[2] === 'X') || 
-  (rowB[0] === 'x' && rowB[1] === 'x' && rowB[2] === 'X') || 
+  (rowB[0] === 'X' && rowB[1] === 'X' && rowB[2] === 'X') || 
   (rowC[0] === 'X' && rowC[1] === 'X' && rowC[2] === 'X') ||
   
   // Columns
@@ -52,9 +52,9 @@ if (
   
   else if (
   // Rows
-  (rowA[0] === 'O' && rowA[1] === 'o' && rowA[2] === 'o') || 
-  (rowB[0] === 'O' && rowB[1] === 'o' && rowB[2] === 'o') || 
-  (rowC[0] === 'O' && rowC[1] === 'o' && rowC[2] === 'o') ||
+  (rowA[0] === 'O' && rowA[1] === 'O' && rowA[2] === 'O') || 
+  (rowB[0] === 'O' && rowB[1] === 'O' && rowB[2] === 'O') || 
+  (rowC[0] === 'O' && rowC[1] === 'O' && rowC[2] === 'O') ||
   
   // Columns
   (rowA[0] === 'O' && rowB[0] === 'O' && rowC[0] === 'O') || 
@@ -69,7 +69,7 @@ if (
     return "o";
     }
 
-  else if (rowA.includes("-") || rowB.includes("-") || rowC.includes("-")) {console.log("Result: No winner found.");
+  else if (rowA.includes("-") || rowB.includes("-") || rowC.includes("-")) {console.log("Result: No winner found.")};
           return "n";
     
   else {
