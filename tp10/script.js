@@ -5,10 +5,10 @@ let rowC = [ "-", "-", "-" ];
 const allCells = document.querySelectorAll("Cell"):
 let turnCounter = 1;
 
-allCells.forEach(Cell => {cell.addEventListener("click", funtion () {
+allCells.forEach(cell => {cell.addEventListener("click", funtion () {
   if (cell.textContent === "") { 
     if (turnCounter % 2 === 0) {
-      cell.textContnet = "O";
+      cell.textContent = "O";
       cell.classList.add("mark-o);
     } else {
       cell.textContent = "X";
@@ -21,11 +21,11 @@ const row = cell.dataset.row;
 const index = cell.dataset.index;
 
 if (row === "A") {
-    rowA[index] = cell.textContent.toLowerCase(); 
+    rowA[index] = cell.textContent; 
 } else if (row === "B") {
-    
+    rowB[index] = cell.textContent;
 } else if (row === "C") {
-    
+    rowC[index] = cell.textContent;
 }
 
 function checkGameboard(rowA, rowB, rowC) {
@@ -68,10 +68,13 @@ if (
     console.log("Result: Player O wins!");
     return "o";
     }
+
+  else if (rowA.includes("-") || rowB.includes("-") || rowC.includes("-")) {console.log("Result: No winner found.");
+          return "n";
     
-    else {
-  console.log("Result: No winner found. It's a draw.");
-  return "d";
+  else {
+    console.log("Result: No winner found. It's a draw.");
+    return "d";
     }
 }
 
