@@ -9,10 +9,10 @@ allCells.forEach(cell => {cell.addEventListener("click", funtion () {
   if (cell.textContent === "") { 
     if (turnCounter % 2 === 0) {
       cell.textContent = "O";
-      cell.classList.add("mark-o);
+      cell.classList.add("mark-o");
     } else {
       cell.textContent = "X";
-      cell.classList.add("mark-x);
+      cell.classList.add("mark-x");
     }
 
     turnCounter++;
