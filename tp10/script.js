@@ -5,7 +5,7 @@ let rowC = [ "-", "-", "-" ];
 const allCells = document.querySelectorAll(".cell");
 let turnCounter = 1;
 
-allCells.forEach(cell => {cell.addEventListener("click", function () {]);
+allCells.forEach(cell => {cell.addEventListener("click", function () {
   if (cell.textContent === "") { 
     if (turnCounter % 2 === 0) {
       cell.textContent = "O";
@@ -13,7 +13,7 @@ allCells.forEach(cell => {cell.addEventListener("click", function () {]);
     } else {
       cell.textContent = "X";
       cell.classList.add("mark-x");
-    }
+    });
 
     turnCounter++;
 
@@ -69,8 +69,8 @@ if (
     return "o";
     }
 
-  else if (rowA.includes("-") || rowB.includes("-") || rowC.includes("-")) {console.log("Result: No winner found.")};
-          return "n";
+  else if (rowA.includes("-") || rowB.includes("-") || rowC.includes("-")) {console.log("Result: No winner found.")
+          return "n"};
     
   else {
     console.log("Result: No winner found. It's a draw.");
