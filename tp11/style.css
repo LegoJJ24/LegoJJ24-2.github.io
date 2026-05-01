@@ -1,0 +1,39 @@
+.card.flip .card-inner {
+    transform: rotateY(180deg);
+}
+
+
+.card.matched {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+#win-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.win-content {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.stats {
+    margin-bottom: 20px;
+    text-align: center;
+}
