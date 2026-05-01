@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App 2.0</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="weather-container">
+    
+    <header class="location-header">
+      <div class="location-wrapper" style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+        <h1 class="city">Loading...</h1>
+        <button id="change-location-btn" class="icon-btn" aria-label="Change location">🔍</button>
+      </div>
+      <p class="date">...</p>
+    </header>
+
+    <main class="current-weather">
+      <div class="temp-wrapper">
+        <h2 class="current-temp temp-cool">--°F</h2>
+      </div>
+      
+      <div class="current-condition">
+        <span class="condition-icon">--</span>
+        <span class="condition-text">Loading Data</span>
+      </div>
+
+      <div class="current-details">
+        <div class="detail-box">
+          <span class="detail-label">Wind</span>
+          <span class="detail-value">
+            <span id="wind-speed">-- mph</span> 
+            <span id="wind-dir" class="wind-arrow">↑</span>
+          </span>
+        </div>
+        <div class="detail-box">
+          <span class="detail-label">Humidity</span>
+          <span class="detail-value"><span id="humidity-val">--%</span> <span class="humidity-icon">💧</span></span>
+        </div>
+      </div>
+    </main>
+
+    <section class="forecast">
+      <h3 class="forecast-title">3-Day Forecast</h3>
+      <div class="forecast-grid" id="forecast-container">
+        </div>
+    </section>
+
+  </div>
+
+  <div id="location-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button id="close-modal-btn" class="close-btn">&times;</button>
+      <h3>Enter Location</h3>
+      <form id="location-form">
+        <input type="text" id="location-input" placeholder="City, Zip, or Lat/Lon" required>
+        <button type="submit" class="submit-btn">Get Weather</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
