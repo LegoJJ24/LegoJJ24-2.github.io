@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game - Jeremiah Olson</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <h1>Memory Match: Landmarks</h1>
+
+    <div class="stats">
+        <p>Pairs Compared: <span id="turn-count">0</span></p>
+        <button onclick="location.reload()">Restart Game</button>
+    </div>
+
+    <div class="game-board" id="game-board">
+        <div class="card" data-framework="river"><div class="card-inner"><div class="card-front"></div><div class="card-back"><img src="https://picsum.photos/id/1015/200" alt="River"></div></div></div>
+        <div class="card" data-framework="river"><div class="card-inner"><div class="card-front"></div><div class="card-back"><img src="https://picsum.photos/id/1015/200" alt="River"></div></div></div>
+        <div class="card" data-framework="canyon"><div class="card-inner"><div class="card-front"></div><div class="card-back"><img src="https://picsum.photos/id/1016/200" alt="Canyon"></div></div></div>
+        <div class="card" data-framework="canyon"><div class="card-inner"><div class="card-front"></div><div class="card-back"><img src="https://picsum.photos/id/1016/200" alt="Canyon"></div></div></div>
+        <div class="card" data-framework="mountains"><div class="card-inner"><div class="card-front"></div><div class="card-back"><img src="https://picsum.photos/id/1018/200" alt="Mountains"></div></div></div>
+        <div class="card" data-framework="mountains"><div class="card-inner"><div class="card-front"></div><div class="card-back"><img src="https://picsum.photos/id/1018/200" alt="Mountains"></div></div></div>
+        <div class="card" data-framework="waves"><div class="card-inner"><div class="card-front"></div><div class="card-back"><img src="https://picsum.photos/id/1019/200" alt="Waves"></div></div></div>
+        <div class="card" data-framework="waves"><div class="card-inner"><div class="card-front"></div><div class="card-back"><img src="https://picsum.photos/id/1019/200" alt="Waves"></div></div></div>
+        <div class="card" data-framework="ice"><div class="card-inner"><div class="card-front"></div><div class="card-back"><img src="https://picsum.photos/id/1020/200" alt="Ice"></div></div></div>
+        <div class="card" data-framework="ice"><div class="card-inner"><div class="card-front"></div><div class="card-back"><img src="https://picsum.photos/id/1020/200" alt="Ice"></div></div></div>
+        <div class="card" data-framework="forest"><div class="card-inner"><div class="card-front"></div><div class="card-back"><img src="https://picsum.photos/id/1021/200" alt="Forest"></div></div></div>
+        <div class="card" data-framework="forest"><div class="card-inner"><div class="card-front"></div><div class="card-back"><img src="https://picsum.photos/id/1021/200" alt="Forest"></div></div></div>
+        <div class="card" data-framework="lights"><div class="card-inner"><div class="card-front"></div><div class="card-back"><img src="https://picsum.photos/id/1022/200" alt="Northern Lights"></div></div></div>
+        <div class="card" data-framework="lights"><div class="card-inner"><div class="card-front"></div><div class="card-back"><img src="https://picsum.photos/id/1022/200" alt="Northern Lights"></div></div></div>
+        <div class="card" data-framework="road"><div class="card-inner"><div class="card-front"></div><div class="card-back"><img src="https://picsum.photos/id/1025/200" alt="Road"></div></div></div>
+        <div class="card" data-framework="road"><div class="card-inner"><div class="card-front"></div><div class="card-back"><img src="https://picsum.photos/id/1025/200" alt="Road"></div></div></div>
+    </div>
+
+    <div id="win-panel" class="hidden">
+        <div class="win-content">
+            <h2>You win!</h2>
+            <p>You completed the game in <span id="final-turns"></span> pairs.</p>
+            <button onclick="location.reload()">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
