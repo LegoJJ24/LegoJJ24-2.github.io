@@ -43,23 +43,23 @@ async function getWeatherData(locationQuery) {
   }
 }
 
-// 2. Auto-Locate using IPify
+
 async function autoLocateAndFetch() {
   try {
-    // Fetch the user's IP address from IPify (no account needed)
+    
     const ipResponse = await fetch('https://api.ipify.org?format=json');
     const ipData = await ipResponse.json();
     
-    // WeatherAPI accepts an IP address as a location query!
+    
     getWeatherData(ipData.ip);
   } catch (error) {
     console.error("Could not find IP location, defaulting to Pullman:", error);
-    // Fallback if IPify fails or is blocked by an ad-blocker
+    
     getWeatherData('Pullman'); 
   }
 }
 
-// 3. Update DOM with live data
+
 function updateUI(data) {
   cityEl.textContent = `${data.location.name}, ${data.location.region || data.location.country}`;
   
@@ -96,7 +96,7 @@ function updateUI(data) {
   });
 }
 
-// --- Modal Event Listeners ---
+
 function openModal() {
   modalOverlay.classList.add('active');
   locationInput.focus();
@@ -117,13 +117,12 @@ locationForm.addEventListener('submit', (e) => {
   e.preventDefault(); 
   const newLocation = locationInput.value.trim();
   if (newLocation) {
-    // Show a loading state while fetching the new city
+    
     cityEl.textContent = "Searching...";
     getWeatherData(newLocation);
     closeModal();
   }
 });
 
-// --- Initialization ---
-// Start by trying to find the user's location via IP
+
 autoLocateAndFetch();
