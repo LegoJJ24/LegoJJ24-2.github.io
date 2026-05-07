@@ -1,0 +1,75 @@
+:root {
+    --card-size: 120px;
+    --bg-color: #f0f2f5;
+    --card-hidden: #2c3e50;
+    --card-border: #ecf0f1;
+    --p1-color: #3498db;
+    --p2-color: #e74c3c;
+}
+
+/* ... keep existing body and h1 styles ... */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.player-box {
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.player-box.active {
+    border: 3px solid #2ecc71;
+    background: white;
+}
+
+.game-board {
+    display: grid;
+    gap: 15px;
+    /* Auto-layout for different card counts */
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-size), 1fr));
+    width: 100%;
+    max-width: 900px;
+    perspective: 1000px; 
+}
+
+/* Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+}
+
+.hidden { display: none !important; }
+
+/* ... include your existing card, card-inner, flip, and matched styles here ... */
+
+.card { width: var(--card-size); height: var(--card-size); cursor: pointer; }
+.card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s; transform-style: preserve-3d; }
+.card.flip .card-inner { transform: rotateY(180deg); }
+.card.matched { visibility: hidden; pointer-events: none; }
+.card-front, .card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 8px; border: 2px solid var(--card-border); }
+.card-front { background-color: var(--card-hidden); }
+.card-back { background-color: white; transform: rotateY(180deg); }
+.card-back img { width: 100%; height: 100%; object-fit: cover; }
