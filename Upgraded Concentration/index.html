@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XC-Concentration</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <h1 id="game-title">Memory Match</h1>
+
+    <div class="stats">
+        <div id="p1-info" class="player-box active">
+            <span id="p1-name-display">Player 1</span>: <span id="p1-score">0</span>
+        </div>
+        <div id="p2-info" class="player-box hidden">
+            <span id="p2-name-display">Player 2</span>: <span id="p2-score">0</span>
+        </div>
+        <p>Current Turn: <span id="current-player-display">---</span></p>
+        <button onclick="location.reload()">Reset Game</button>
+        <button id="clear-cookies" onclick="clearGameData()">Clear History</button>
+    </div>
+
+    <div class="game-board" id="game-board"></div>
+
+    <div id="win-panel" class="hidden">
+        <div class="win-content">
+            <h2 id="win-message">You win!</h2>
+            <p id="win-stats"></p>
+            <button onclick="location.reload()">Play Again</button>
+        </div>
+    </div>
+
+    <div id="config-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Game Setup</h2>
+            <div id="cookie-history"></div>
+            
+            <label>Number of Pairs:</label>
+            <select id="pair-select">
+                <option value="6">6 Pairs (Easy)</option>
+                <option value="8" selected>8 Pairs (Medium)</option>
+                <option value="10">10 Pairs (Hard)</option>
+                <option value="12">12 Pairs (Expert)</option>
+            </select>
+
+            <label>Players:</label>
+            <select id="player-select" onchange="toggleNameInputs()">
+                <option value="1">1 Player</option>
+                <option value="2">2 Players</option>
+            </select>
+
+            <div class="name-inputs">
+                <input type="text" id="p1-name-input" placeholder="Player 1 Name">
+                <input type="text" id="p2-name-input" class="hidden" placeholder="Player 2 Name">
+            </div>
+
+            <button onclick="startGame()">Start Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
