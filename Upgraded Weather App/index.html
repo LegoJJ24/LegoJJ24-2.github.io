@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App XC</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="weather-container">
+    <header class="location-header">
+      <div class="location-wrapper">
+        <h1 class="city">Loading...</h1>
+        <button id="change-location-btn" class="icon-btn" title="Search Location">🔍</button>
+        <button id="local-weather-btn" class="icon-btn" title="Reset to Local">📍</button>
+      </div>
+      <p class="date">...</p>
+      
+      <div id="recent-locations-container" class="recent-wrapper">
+        <select id="recent-locations-select">
+          <option value="" disabled selected>Recent Locations</option>
+        </select>
+      </div>
+    </header>
+
+    <main class="current-weather">
+      <div class="temp-wrapper">
+        <h2 class="current-temp">--°F</h2>
+      </div>
+      <div class="current-condition">
+        <span class="condition-icon">--</span>
+        <span class="condition-text">Loading...</span>
+      </div>
+      <div class="current-details">
+        <div class="detail-box">
+          <span class="detail-label">Wind</span>
+          <span class="detail-value">
+            <span id="wind-speed">-- mph</span> 
+            <span id="wind-dir" class="wind-arrow">↑</span>
+          </span>
+        </div>
+        <div class="detail-box">
+          <span class="detail-label">Humidity</span>
+          <span class="detail-value"><span id="humidity-val">--%</span></span>
+        </div>
+      </div>
+    </main>
+
+    <section class="hourly-forecast">
+      <h3 class="section-title">Hourly Forecast (72 Hours)</h3>
+      <div class="hourly-scroll-container" id="hourly-container">
+        </div>
+    </section>
+
+    <section class="forecast">
+      <h3 class="section-title">3-Day Summary</h3>
+      <div class="forecast-grid" id="forecast-container"></div>
+    </section>
+  </div>
+
+  <div id="location-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button id="close-modal-btn" class="close-btn">&times;</button>
+      <h3>Find a City</h3>
+      <form id="location-form">
+        <input type="text" id="location-input" placeholder="City name or Zip" required>
+        <button type="submit" class="submit-btn">Get Weather</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
