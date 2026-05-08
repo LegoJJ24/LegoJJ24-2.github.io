@@ -2,15 +2,12 @@
 const campaigns = [
     {
         title: "Curse of Stradh",
-        cover: "images/iron-gauntlet.jpg",
+        cover: "images/Curse of Strahd.jpg",
         youtube: "https://www.youtube.com/playlist?list=PL3oV2T3K57dEYP-o0w1qExPpmJwdXu1nV",
         github: "https://github.com/LegoJJ24/..." 
     },
     {
-        title: "Shadows of the Tavern",
-        cover: "images/tavern-shadows.jpg",
-        youtube: "https://youtube.com/playlist?list=...",
-        github: "https://github.com/LegoJJ24/..."
+        
     }
 ];
 
