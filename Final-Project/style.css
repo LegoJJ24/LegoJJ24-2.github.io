@@ -114,3 +114,56 @@ h1 {
 .card-links a:hover {
     color: var(--guild-red);
 }
+.party-roster {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.roster-title {
+    color: var(--gold-text);
+    text-align: center;
+    border-bottom: 2px solid var(--guild-red);
+    padding-bottom: 10px;
+}
+
+.character-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.character-card {
+    background-color: #f4e4bc; 
+    color: #2b1d0e; 
+    padding: 15px;
+    width: 150px;
+    border: 2px solid #d4af37;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+    text-align: center;
+    transform: rotate(-1deg); 
+    transition: 0.2s;
+}
+
+.character-card:nth-child(even) {
+    transform: rotate(1.5deg);
+}
+
+.character-card:hover {
+    transform: scale(1.05) rotate(0deg);
+    z-index: 10;
+}
+
+.sheet-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: var(--guild-red);
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    border-radius: 3px;
+}
