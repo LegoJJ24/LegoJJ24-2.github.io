@@ -209,3 +209,40 @@ h1 {
     background: var(--guild-red);
     color: white;
 }
+
+
+.char-portrait {
+    width: 100px;               /
+    height: 100px;            
+    object-fit: cover;          
+    border-radius: 50%;        
+    border: 3px solid var(--gold-text); 
+    margin: 0 auto 10px auto;   
+    display: block;
+    background-color: var(--tavern-dark);
+}
+
+
+.character-card {
+    background-color: #f4e4bc;  
+    color: #2b1d0e;            
+    padding: 20px 15px;
+    width: 180px;               
+    border: 2px solid #d4af37;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+    text-align: center;
+    transform: rotate(-1deg);   
+    transition: 0.2s ease-in-out;
+}
+
+.character-card h4 {
+    margin: 10px 0 5px 0;
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.player-name {
+    font-style: italic;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
