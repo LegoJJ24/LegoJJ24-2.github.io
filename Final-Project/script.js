@@ -1,38 +1,24 @@
-// Campaign data array - easy to update or fetch from an API later
-const campaigns = [
-    {
-        title: "Curse of Stradh",
-        cover: "images/Curse of Strahd.jpg",
-        youtube: "https://www.youtube.com/playlist?list=PL3oV2T3K57dEYP-o0w1qExPpmJwdXu1nV",
-        github: "https://github.com/LegoJJ24/..." 
-    },
-    {
-        
-    }
-];
+// Function to handle link clicks or interactions
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("The Adventurer's Guild Archive Loaded.");
 
-function loadCampaigns() {
-    const container = document.getElementById('campaign-list');
+    const campaignLinks = document.querySelectorAll('.campaign-link');
     
-    campaigns.forEach(campaign => {
-        const card = document.createElement('article');
-        card.className = 'campaign-card';
-        
-        card.innerHTML = `
-            <div class="card-image">
-                <img src="${campaign.cover}" alt="${campaign.title} Book Cover">
-            </div>
-            <div class="card-content">
-                <h3>${campaign.title}</h3>
-                <div class="card-links">
-                    <a href="${campaign.youtube}" target="_blank" class="link-btn">Sessions</a>
-                    <a href="${campaign.github}" target="_blank" class="link-btn">Code</a>
-                </div>
-            </div>
-        `;
-        container.appendChild(card);
+    campaignLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Placeholder for future multi-page navigation [cite: 5]
+            console.log(`Navigating to details for: ${link.textContent.trim()}`);
+        });
     });
-}
 
-// Initializing the load [cite: 56]
-document.addEventListener('DOMContentLoaded', loadCampaigns);
+    // YouTube API Integration Placeholder [cite: 28]
+    // To be expanded for dynamic recording updates
+    async function fetchLatestRecordings() {
+        try {
+            // logic for YouTube Data API would go here [cite: 50]
+            console.log("Fetching latest campaign sessions...");
+        } catch (error) {
+            console.error("Error fetching YouTube data:", error);
+        }
+    }
+});
