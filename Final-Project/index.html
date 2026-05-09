@@ -3,37 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Archive of Initiatives</title>
+    <title>The Archive of Initiatives | Jeremiah Olson</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto+Mono&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="main-header">
         <h1>The Archive of Initiatives</h1>
         <nav class="resource-nav">
-            <a href="#" class="nav-btn">Books</a>
-            <a href="#" class="nav-btn">Tools</a>
-            <a href="#" class="nav-btn">GitHub</a>
+            <a href="#" class="nav-button">Buy Books</a>
+            <a href="#" class="nav-button">Dev Tools</a>
+            <a href="https://github.com/LegoJJ24" class="nav-button github-btn">GitHub</a>
         </nav>
     </header>
 
-    <main class="archive-container">
-        <section id="campaign-list" class="campaign-grid">
+    <main class="content-container">
+        <section class="campaign-stack">
+            
             <article class="campaign-card">
                 <div class="card-image">
-                    <img src="path-to-book-cover.jpg" alt="Campaign Book Cover">
+                    <img src="https://via.placeholder.com/200x260" alt="Campaign Book Cover">
                 </div>
-                <div class="card-content">
-                    <h3>Campaign Name</h3>
+                <div class="card-info">
+                    <h2>Campaign Title</h2>
+                    <p>Brief description of the series or homebrew setting.</p>
                     <div class="card-links">
-                        <a href="#" class="link-btn youtube">YouTube Sessions</a>
-                        <a href="#" class="link-btn github">Project Code</a>
+                        <a href="#" class="link-icon">YouTube Sessions</a>
+                        <a href="#" class="link-icon">View Code</a>
                     </div>
                 </div>
             </article>
+
+            <article class="campaign-card">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/200x260" alt="Campaign Book Cover">
+                </div>
+                <div class="card-info">
+                    <h2>Campaign Title</h2>
+                    <p>Brief description of the series or homebrew setting.</p>
+                    <div class="card-links">
+                        <a href="#" class="link-icon">YouTube Sessions</a>
+                    </div>
+                </div>
+            </article>
+
         </section>
+
+        <aside class="layout-description">
+            <p>Welcome to the Hub. Navigate through my D&D campaign recordings and the technical code that powers my games.</p>
+        </aside>
     </main>
 
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2026 LegoJJ24</p>
+    </footer>
+
 </body>
 </html>
