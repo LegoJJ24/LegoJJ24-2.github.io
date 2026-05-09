@@ -3,61 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Archive of Initiatives | Jeremiah Olson</title>
+    <title>The Adventurer's Guild</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto+Mono&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header class="main-header">
-        <h1>The Archive of Initiatives</h1>
-        <nav class="resource-nav">
-            <a href="#" class="nav-button">Buy Books</a>
-            <a href="#" class="nav-button">Dev Tools</a>
-            <a href="https://github.com/LegoJJ24" class="nav-button github-btn">GitHub</a>
-        </nav>
+    <header>
+        <div class="header-container">
+            <h1>The Adventurer's Guild</h1>
+            <nav>
+                <a href="https://www.dndbeyond.com/sources" class="nav-btn">Books</a>
+                <a href="#" class="nav-btn">Tools</a>
+                <a href="https://github.com/LegoJJ24" class="nav-btn">GitHub</a>
+            </nav>
+        </div>
     </header>
 
-    <main class="content-container">
-        <section class="campaign-stack">
-            
-            <article class="campaign-card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x260" alt="Campaign Book Cover">
-                </div>
+    <main id="campaign-archive">
+        <div class="campaign-card">
+            <div class="card-visual">
+                <img src="Curse of Strahd.jpg" alt="Curse of Strahd Book Cover">
                 <div class="card-info">
-                    <h2>Campaign Title</h2>
-                    <p>Brief description of the series or homebrew setting.</p>
-                    <div class="card-links">
-                        <a href="#" class="link-icon">YouTube Sessions</a>
-                        <a href="#" class="link-icon">View Code</a>
-                    </div>
+                    <a href="strahd-details.html" class="campaign-link">
+                        <h2>Curse of Strahd</h2>
+                    </a>
                 </div>
-            </article>
+            </div>
+            <div class="card-links">
+                <p>Resources & Links:</p>
+                <a href="https://www.dndbeyond.com/sources/dnd/cos" target="_blank">Sourcebook</a>
+                <a href="https://www.youtube.com/playlist?list=PL3oV2T3K57dEYP-o0w1qExPpmJwdXu1nV" target="_blank">YouTube Recordings</a>
+                <a href="#" class="github-repo">Project Code</a>
+            </div>
+        </div>
 
-            <article class="campaign-card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x260" alt="Campaign Book Cover">
-                </div>
+        <div class="campaign-card">
+            <div class="card-visual">
+                <div class="image-placeholder">Next Adventure</div>
                 <div class="card-info">
-                    <h2>Campaign Title</h2>
-                    <p>Brief description of the series or homebrew setting.</p>
-                    <div class="card-links">
-                        <a href="#" class="link-icon">YouTube Sessions</a>
-                    </div>
+                    <a href="#" class="campaign-link">
+                        <h2>Unknown Depths</h2>
+                    </a>
                 </div>
-            </article>
-
-        </section>
-
-        <aside class="layout-description">
-            <p>Welcome to the Hub. Navigate through my D&D campaign recordings and the technical code that powers my games.</p>
-        </aside>
+            </div>
+            <div class="card-links">
+                <p>Resources & Links:</p>
+                <a href="#">Resources</a>
+                <a href="#">Recordings</a>
+                <a href="#">Repository</a>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 LegoJJ24</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
